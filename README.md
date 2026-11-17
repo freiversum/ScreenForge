@@ -23,41 +23,129 @@
 
 ## What it does
 
-### Screenshots in, presentation image out
-
-Drop in a few screenshots, paste them from the clipboard or take them straight from your Android phone. ScreenForge lines them up, scales them to a common size and adds shadows and rounded corners. Horizontal, vertical, grid, or free placement with snapping and alignment tools.
-
-<p align="center">
-  <img src="docs/screenshots/example-output.jpg" alt="An exported image: three phone screenshots on a purple background with concentric arcs and a watermark" width="100%">
-</p>
-
-### Backgrounds that look designed
-
-The background generator draws abstract scenes in eleven styles: layered paper, concentric arcs, silk ribbons, folded planes, line bundles, soft mist, paper-cut contours, pebbles, mesh gradients, low-poly facets and Bauhaus geometry. It is [Prospekt](https://github.com/linuxundich/prospekt), a library of its own. Colors come in harmonious palettes, vivid, light or dark, or taken from your screenshots. Don't like it? The sidebar always offers six variants, and the background studio shows nine large previews of your actual composition. Plain colors, gradients, your own image or a blurred copy of a screenshot work too.
-
-<p align="center">
-  <img src="docs/screenshots/background-studio.png" alt="The background studio with nine variants of the arcs style" width="100%">
-</p>
+<table>
+<tr>
+<td width="33%" valign="top">
 
 ### Phones, tablets, browsers, in perspective
 
-Put each screenshot into a generic phone with a punch-hole camera, a tablet or a browser window, dark or light. Turn and lean them in real perspective, or fan them out so the outer ones face the middle.
+Put each screenshot into a generic phone with a punch-hole camera, a tablet
+or a browser window, dark or light. Turn and lean them in real perspective,
+or fan them out so the outer ones face the middle.
+
+</td>
+<td width="33%" valign="top">
 
 ### Point things out, hide what's private
 
-Give each screenshot a label (a capsule on it, a caption below or a headline above, always sized to the screenshot), add callouts that point at a detail, and black out, pixelate or blur e-mail addresses and other private bits before you share: drag a rectangle over them right on the screenshot, then move or resize it there.
+Give each screenshot a label (a capsule on it, a caption below or a headline
+above, always sized to the screenshot) and add callouts that point at a
+detail. Black out, pixelate or blur e-mail addresses and other private bits
+before you share: drag a rectangle over them right on the screenshot, then
+move or resize it there.
 
-### The right size for every place
-
-Keep the canvas fitted to the content or pick a format: 16:9, square, 4:5, story, Open Graph, Mastodon and Bluesky, the Play Store feature graphic or App Store sizes. Your content stays centered and is never cropped. Split a composition into several images with one continuous background for app store panoramas, or export a short animated WebM in which the screenshots fly in. Add a watermark with your logo, export the iPhone, iPad and Google Play sizes in one go, export as PNG, JPEG, WebP, AVIF or PDF, with a transparent background if you like, or copy the result to the clipboard and drag it straight into a browser or chat.
-
-<p align="center">
-  <img src="docs/screenshots/export.png" alt="The export tab with format presets, transparent background and watermark settings" width="100%">
-</p>
+</td>
+<td width="33%" valign="top">
 
 ### At home on GNOME
 
-Adaptive layout, a tabbed sidebar, keyboard shortcuts and undo for every edit. Open images from the file manager, take a desktop screenshot through the system dialog, or import from an Android device over adb, with a clean status bar showing 12:00 and a full battery. Every composition is kept as a scene with all its settings: the start screen shows them as preview cards to reopen, rename, duplicate or delete, and they save themselves. Export a scene as a `.screenforge` file to share it, and reuse your look as presets, also from the command line: `screenforge --preset Blog --output shots.png *.png`. English and German included.
+Adaptive layout, a tabbed sidebar, keyboard shortcuts and undo for every
+edit. Open images from the file manager, take a desktop screenshot through
+the system dialog, or import from an Android device over adb, with a clean
+status bar showing 12:00 and a full battery.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="55%">
+<img src="docs/screenshots/example-output.jpg" alt="An exported image: three phone screenshots on a purple background with concentric arcs and a watermark" width="100%">
+</td>
+<td valign="middle">
+
+### Screenshots in, presentation image out
+
+Drop in a few screenshots, paste them from the clipboard or take them
+straight from your Android phone. ScreenForge lines them up, scales them to
+a common size and adds shadows and rounded corners. Horizontal, vertical,
+grid, or free placement with snapping and alignment tools.
+
+### Scenes and presets
+
+Every composition is kept as a scene with all its settings: the start screen
+shows them as preview cards to reopen, rename, duplicate or delete, and they
+save themselves. Export a scene as a `.screenforge` file to share it, and
+reuse your look as presets, also from the command line:
+`screenforge --preset Blog --output shots.png *.png`.
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td valign="middle">
+
+### Backgrounds that look designed
+
+The background generator draws abstract scenes in eleven styles: layered
+paper, concentric arcs, silk ribbons, folded planes, line bundles, soft mist,
+paper-cut contours, pebbles, mesh gradients, low-poly facets and Bauhaus
+geometry. It is [Prospekt](https://github.com/linuxundich/prospekt), a
+library of its own. Colors come in harmonious palettes, vivid, light or dark,
+or taken from your screenshots.
+
+### Six variants, nine previews
+
+Don't like it? The sidebar always offers six variants, and the background
+studio shows nine large previews of your actual composition. Plain colors,
+gradients, your own image or a blurred copy of a screenshot work too.
+
+</td>
+<td width="55%">
+<img src="docs/screenshots/background-studio.png" alt="The background studio with nine variants of the arcs style" width="100%">
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="55%">
+<img src="docs/screenshots/export.png" alt="The export tab with format presets, transparent background and watermark settings" width="100%">
+</td>
+<td valign="middle">
+
+### The right size for every place
+
+Keep the canvas fitted to the content or pick a format: 16:9, square, 4:5,
+story, Open Graph, Mastodon and Bluesky, the Play Store feature graphic or
+App Store sizes. Your content stays centered and is never cropped. Split a
+composition into several images with one continuous background for app
+store panoramas, or export a short animated WebM in which the screenshots
+fly in.
+
+### Export in one go
+
+Add a watermark with your logo, export the iPhone, iPad and Google Play
+sizes in one go, export as PNG, JPEG, WebP, AVIF or PDF, with a transparent
+background if you like, or copy the result to the clipboard and drag it
+straight into a browser or chat.
+
+</td>
+</tr>
+</table>
+
+## At a glance
+
+| | |
+|---|---|
+| **Runs on** | GNOME, as a native GTK&nbsp;4 and libadwaita app that works entirely offline |
+| **Imports** | image files, the clipboard, a desktop screenshot, or an Android device over adb |
+| **Exports** | PNG, JPEG, WebP, AVIF, PDF and animated WebM |
+| **Languages** | English and German included |
+| **Licence** | GPL-3.0-or-later |
 
 ## Install
 
