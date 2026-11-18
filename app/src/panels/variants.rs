@@ -140,6 +140,7 @@ pub(crate) fn style_name(style: GeneratorStyle) -> String {
         GeneratorStyle::Mesh => gettext("Gradient"),
         GeneratorStyle::LowPoly => gettext("Facets"),
         GeneratorStyle::Bauhaus => gettext("Bauhaus"),
+        GeneratorStyle::Quiet => gettext("Quiet"),
         GeneratorStyle::Waves => gettext("Waves (Classic)"),
     }
 }

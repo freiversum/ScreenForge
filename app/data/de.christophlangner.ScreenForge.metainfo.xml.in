@@ -61,6 +61,11 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.37.0" date="2026-11-18">
+      <description translate="no">
+        <p>A new background style: quiet, a calm backdrop that keeps two or three brand colors exactly as they are, in a light and a dark version.</p>
+      </description>
+    </release>
     <release version="0.36.0" date="2026-10-11">
       <description translate="no">
         <p>Four new background styles: pebbles, mesh gradients, low-poly facets and Bauhaus geometry.</p>

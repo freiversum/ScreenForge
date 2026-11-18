@@ -90,10 +90,11 @@ reuse your look as presets, also from the command line:
 
 ### Backgrounds that look designed
 
-The background generator draws abstract scenes in eleven styles: layered
+The background generator draws abstract scenes in twelve styles: layered
 paper, concentric arcs, silk ribbons, folded planes, line bundles, soft mist,
-paper-cut contours, pebbles, mesh gradients, low-poly facets and Bauhaus
-geometry. It is [Prospekt](https://github.com/linuxundich/prospekt), a
+paper-cut contours, pebbles, mesh gradients, low-poly facets, Bauhaus
+geometry and a quiet style that keeps two or three brand colors exactly as
+they are. It is [Prospekt](https://github.com/linuxundich/prospekt), a
 library of its own. Colors come in harmonious palettes, vivid, light or dark,
 or taken from your screenshots.
 

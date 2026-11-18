@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.37.0] - 2026-11-18
+
+### Added
+
+- Background style Quiet ("Schlicht") from Prospekt 0.5.0: a ground color,
+  one large area a small step lighter or darker and a few fine lines. It
+  keeps manual colors exactly as they are, so two or three brand colors
+  work; the most saturated one draws the lines, and the mood picks a light
+  or dark ground.
+
 ### Changed
 
 - README restructured: feature grid, screenshots beside the text, facts at a glance.
