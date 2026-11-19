@@ -460,6 +460,7 @@ mod tests {
             mood: crate::model::Mood::Dark,
             grain: 0.42,
             version: 2,
+            vibrance: 0.6,
         };
         doc.background = Background::Generated(generated.clone());
 

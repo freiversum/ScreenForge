@@ -155,11 +155,12 @@ pub(crate) fn bind_editor_model(window: &Window, canvas: &Canvas, model: &Editor
     for row in [window.background_image_row().upcast::<gtk4::Widget>(), window.background_image_fit_row().upcast(), window.background_image_opacity_row().upcast()] {
         show_when(model, "background-kind", &row, |k: u32| k == BACKGROUND_KIND_IMAGE);
     }
-    let generator_widgets: [gtk4::Widget; 12] = [
+    let generator_widgets: [gtk4::Widget; 13] = [
         window.generator_color_strategy_row().upcast(),
         window.generator_style_row().upcast(),
         window.generator_mood_row().upcast(),
         window.generator_grain_row().upcast(),
+        window.generator_vibrance_row().upcast(),
         window.generator_adapt_row().upcast(),
         window.generator_corner_bias_row().upcast(),
         window.generator_scale_row().upcast(),

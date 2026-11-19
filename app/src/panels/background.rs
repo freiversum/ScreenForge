@@ -69,6 +69,7 @@ pub(crate) fn sync_generator_controls(window: &Window, generated: &GeneratedBack
     window.generator_style_row().set_selected(index_for_generator_style(generated.style));
     window.generator_mood_row().set_selected(index_for_mood(generated.mood));
     window.generator_grain_row().set_value(generated.grain * 100.0);
+    window.generator_vibrance_row().set_value(generated.vibrance * 100.0);
     let manual_buttons =
         [window.generator_manual_color_button_1(), window.generator_manual_color_button_2(), window.generator_manual_color_button_3(), window.generator_manual_color_button_4()];
     for (i, button) in manual_buttons.iter().enumerate() {
@@ -458,14 +459,17 @@ pub(crate) fn register_generator_controls(window: &Window, canvas: &Canvas, stat
             let style = generator_style_for_index(window.generator_style_row().selected());
             let mood = mood_for_index(window.generator_mood_row().selected());
             let seed = window.generator_seed_row().value() as u64;
-            // Style and mood decide how a derived palette is resolved (see
+            // Style, mood and color strength decide how a derived palette is resolved (see
             // `resolve_palette_for`), so switching either one re-resolves
             // it for the current seed rather than waiting for the next
             // "Generieren" click — otherwise the mood dropdown would look
             // like it does nothing.
-            let palette = if !matches!(color_strategy, ColorStrategy::Manual) && (style != current.style || mood != current.mood) {
+            let vibrance = window.generator_vibrance_row().value() / 100.0;
+            let palette = if !matches!(color_strategy, ColorStrategy::Manual)
+                && (style != current.style || mood != current.mood || vibrance != current.vibrance)
+            {
                 let inverse_contrast = window.generator_inverse_contrast_row().value() / 100.0;
-                resolve_generator_palette(&mut state_ref, color_strategy, inverse_contrast, seed, style, mood)
+                resolve_generator_palette(&mut state_ref, color_strategy, inverse_contrast, seed, style, mood, vibrance)
             } else {
                 palette
             };
@@ -473,6 +477,7 @@ pub(crate) fn register_generator_controls(window: &Window, canvas: &Canvas, stat
                 seed,
                 style,
                 mood,
+                vibrance,
                 grain: window.generator_grain_row().value() / 100.0,
                 color_strategy,
                 palette,
@@ -559,6 +564,7 @@ pub(crate) fn register_generator_controls(window: &Window, canvas: &Canvas, stat
     window.generator_style_row().connect_selected_notify(glib::clone!(#[strong] apply, move |_| apply()));
     window.generator_mood_row().connect_selected_notify(glib::clone!(#[strong] apply, move |_| apply()));
     window.generator_grain_row().connect_value_notify(glib::clone!(#[strong] apply, move |_| apply()));
+    window.generator_vibrance_row().connect_value_notify(glib::clone!(#[strong] apply, move |_| apply()));
 
     window.generator_generate_row().connect_activated(glib::clone!(
         #[weak]
@@ -572,8 +578,8 @@ pub(crate) fn register_generator_controls(window: &Window, canvas: &Canvas, stat
 }
 
 /// Resolves a generator palette from the currently visible screenshots'
-/// pixels (decoded through the shared image cache) for `strategy`, `style`
-/// and `mood`. Not for `ColorStrategy::Manual`, whose palette is the user's
+/// pixels (decoded through the shared image cache) for `strategy`, `style`,
+/// `mood` and color strength `vibrance` (`0.0..=1.0`). Not for `ColorStrategy::Manual`, whose palette is the user's
 /// own colors.
 pub(crate) fn resolve_generator_palette(
     state: &mut EditorState,
@@ -582,6 +588,7 @@ pub(crate) fn resolve_generator_palette(
     seed: u64,
     style: GeneratorStyle,
     mood: Mood,
+    vibrance: f64,
 ) -> Vec<Rgba> {
     let paths: Vec<PathBuf> = state
         .document
@@ -598,7 +605,7 @@ pub(crate) fn resolve_generator_palette(
         .iter()
         .map(|image| screenforge_core::palette::PixelSample { bytes: &image.bytes, width: image.width, height: image.height })
         .collect();
-    screenforge_core::palette::resolve_palette_for(&samples, strategy, inverse_contrast, seed, style, mood)
+    screenforge_core::palette::resolve_palette_vibrant(&samples, strategy, inverse_contrast, seed, style, mood, vibrance)
 }
 
 /// Resolves a fresh palette (from the currently visible screenshots, per
@@ -654,6 +661,7 @@ pub(crate) fn generate_background(window: &Window, canvas: &Canvas, state: &Rc<R
     let inverse_contrast = window.generator_inverse_contrast_row().value() / 100.0;
     let style = generator_style_for_index(window.generator_style_row().selected());
     let mood = mood_for_index(window.generator_mood_row().selected());
+    let vibrance = window.generator_vibrance_row().value() / 100.0;
     let palette = if matches!(color_strategy, ColorStrategy::Manual) {
         [
             window.generator_manual_color_button_1().rgba(),
@@ -665,13 +673,14 @@ pub(crate) fn generate_background(window: &Window, canvas: &Canvas, state: &Rc<R
         .map(rgba_from_gdk)
         .collect()
     } else {
-        resolve_generator_palette(&mut state_ref, color_strategy, inverse_contrast, new_seed, style, mood)
+        resolve_generator_palette(&mut state_ref, color_strategy, inverse_contrast, new_seed, style, mood, vibrance)
     };
 
     let new = GeneratedBackground {
         seed: new_seed,
         style,
         mood,
+        vibrance,
         grain: window.generator_grain_row().value() / 100.0,
         color_strategy,
         palette,

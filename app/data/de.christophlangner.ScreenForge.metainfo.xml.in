@@ -61,6 +61,11 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.38.0" date="2026-11-19">
+      <description translate="no">
+        <p>Strong colors: a color strength setting takes generated backgrounds from soft, slightly pastel tones to deep, saturated ones.</p>
+      </description>
+    </release>
     <release version="0.37.0" date="2026-11-18">
       <description translate="no">
         <p>A new background style: quiet, a calm backdrop that keeps two or three brand colors exactly as they are, in a light and a dark version.</p>

@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.38.0] - 2026-11-19
+
+### Added
+
+- Color strength ("Farbstärke") for generated backgrounds, from Prospekt
+  0.6.0: 0 % gives the soft, slightly pastel palettes as before (the
+  default), 100 % strong, deeply saturated colors with the same hues. It
+  applies to random and screenshot palettes (not to grayscale),
+  re-resolves the palette right away and carries over to the variants;
+  manual colors stay as they are. Scenes save it; older scenes load
+  soft.
+
+### Changed
+
+- New generated backgrounds use Prospekt's algorithm version 3: with
+  strong colors the accent may be as saturated as the screen shows.
+  Saved scenes keep their version and look exactly as before.
+
 ## [0.37.0] - 2026-11-18
 
 ### Added

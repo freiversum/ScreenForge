@@ -34,6 +34,7 @@ fn candidates(state: &mut EditorState, base: &GeneratedBackground, roll: u64, mi
                     candidate.seed,
                     candidate.style,
                     candidate.mood,
+                    candidate.vibrance,
                 );
             }
             candidate

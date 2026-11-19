@@ -141,6 +141,10 @@ impl Window {
         self.imp().generator_mood_row.get().clone()
     }
 
+    pub fn generator_vibrance_row(&self) -> adw::SpinRow {
+        self.imp().generator_vibrance_row.get().clone()
+    }
+
     pub fn generator_grain_row(&self) -> adw::SpinRow {
         self.imp().generator_grain_row.get().clone()
     }
@@ -489,6 +493,8 @@ mod imp {
         pub generator_mood_row: TemplateChild<adw::ComboRow>,
         #[template_child]
         pub generator_grain_row: TemplateChild<adw::SpinRow>,
+        #[template_child]
+        pub generator_vibrance_row: TemplateChild<adw::SpinRow>,
         #[template_child]
         pub generator_manual_color_row_1: TemplateChild<adw::ActionRow>,
         #[template_child]
