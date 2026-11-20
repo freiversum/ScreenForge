@@ -193,6 +193,10 @@ pub(crate) fn register_about_action(app: &adw::Application) {
                 .release_notes_version(env!("CARGO_PKG_VERSION"))
                 .build();
 
+            // freiversum is the umbrella brand over the author's
+            // independent projects; listed after the website/issue links.
+            dialog.add_link(&gettext("A star in the freiversum"), "https://freiversum.de/");
+
             // "Built with" — who/what, not the legal details (those are
             // their own section below); `add_credit_section`'s row format
             // is "Name https://url", the same one GNOME's own about

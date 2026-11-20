@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- About dialog: link "A star in the freiversum" to
+  https://freiversum.de/, the umbrella brand over the author's
+  independent projects (German: "Ein Stern im freiversum").
+
 ## [0.38.0] - 2026-11-19
 
 ### Added

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: screenforge\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxundich/ScreenForge/issues\n"
-"POT-Creation-Date: 2026-11-19 08:37+0100\n"
+"POT-Creation-Date: 2026-11-20 14:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -845,7 +845,7 @@ msgstr ""
 msgid "Android"
 msgstr ""
 
-#: app/src/dialogs.rs:50 app/src/dialogs.rs:266
+#: app/src/dialogs.rs:50 app/src/dialogs.rs:270
 msgid "General"
 msgstr ""
 
@@ -853,83 +853,87 @@ msgstr ""
 msgid "Arranges smartphone screenshots into a single presentation image — a native GNOME app."
 msgstr ""
 
-#: app/src/dialogs.rs:200
+#: app/src/dialogs.rs:198
+msgid "A star in the freiversum"
+msgstr ""
+
+#: app/src/dialogs.rs:204
 msgid "Language"
 msgstr ""
 
-#: app/src/dialogs.rs:202
+#: app/src/dialogs.rs:206
 msgid "GUI Framework"
 msgstr ""
 
-#: app/src/dialogs.rs:206
+#: app/src/dialogs.rs:210
 msgid "gtk4-rs / libadwaita-rs (Rust bindings) https://gtk-rs.org"
 msgstr ""
 
-#: app/src/dialogs.rs:209
+#: app/src/dialogs.rs:213
 msgid "Graphics &amp; Rendering"
 msgstr ""
 
-#: app/src/dialogs.rs:211
+#: app/src/dialogs.rs:215
 msgid "Other Libraries"
 msgstr ""
 
-#: app/src/dialogs.rs:230
+#: app/src/dialogs.rs:234
 msgid "gtk4-rs, libadwaita-rs (Rust bindings)"
 msgstr ""
 
-#: app/src/dialogs.rs:235
+#: app/src/dialogs.rs:239
 msgid "Dual-licensed under MIT or Apache-2.0, at the copyright holder's option."
 msgstr ""
 
-#: app/src/dialogs.rs:258
+#: app/src/dialogs.rs:262
 msgid "Back to Scenes"
 msgstr ""
 
-#: app/src/dialogs.rs:260
+#: app/src/dialogs.rs:264
 msgid "Save Now"
 msgstr ""
 
-#: app/src/dialogs.rs:261
+#: app/src/dialogs.rs:265
 msgid "Import File"
 msgstr ""
 
-#: app/src/dialogs.rs:262
+#: app/src/dialogs.rs:266
 msgid "Export as File"
 msgstr ""
 
-#: app/src/dialogs.rs:268
+#: app/src/dialogs.rs:272
 msgid "Open Images"
 msgstr ""
 
-#: app/src/dialogs.rs:270
+#: app/src/dialogs.rs:274
 msgid "Import from Android"
 msgstr ""
 
-#: app/src/dialogs.rs:277
+#: app/src/dialogs.rs:281
 msgid "Editing"
 msgstr ""
 
-#: app/src/dialogs.rs:278 app/src/scenes.rs:407
+#: app/src/dialogs.rs:282 app/src/scenes.rs:407
 msgid "Undo"
 msgstr ""
 
-#: app/src/dialogs.rs:278
+#: app/src/dialogs.rs:282
 msgid "Redo"
 msgstr ""
 
-#: app/src/dialogs.rs:278
+#: app/src/dialogs.rs:282
 msgid "Delete Selection"
 msgstr ""
 
-#: app/src/dialogs.rs:281
+#: app/src/dialogs.rs:285
 msgid "View"
 msgstr ""
 
-#: app/src/dialogs.rs:284
+#: app/src/dialogs.rs:288
 msgid "Original Size"
 msgstr ""
 
-#: app/src/dialogs.rs:287
+#: app/src/dialogs.rs:291
 msgid "Toggle Sidebar"
 msgstr ""
 
