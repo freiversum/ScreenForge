@@ -26,10 +26,10 @@
   <developer id="de.christophlangner">
     <name translate="no">Christoph Langner</name>
   </developer>
-  <url type="homepage">https://github.com/linuxundich/ScreenForge</url>
-  <url type="bugtracker">https://github.com/linuxundich/ScreenForge/issues</url>
-  <url type="vcs-browser">https://github.com/linuxundich/ScreenForge</url>
-  <url type="translate">https://github.com/linuxundich/ScreenForge/tree/main/po</url>
+  <url type="homepage">https://github.com/freiversum/ScreenForge</url>
+  <url type="bugtracker">https://github.com/freiversum/ScreenForge/issues</url>
+  <url type="vcs-browser">https://github.com/freiversum/ScreenForge</url>
+  <url type="translate">https://github.com/freiversum/ScreenForge/tree/main/po</url>
   <translation type="gettext">screenforge</translation>
   <branding>
     <color type="primary" scheme_preference="light">#f6d5b0</color>
@@ -49,15 +49,15 @@
   <screenshots>
     <screenshot type="default">
       <caption>Screenshots on a generated background, with the variant grid</caption>
-      <image>https://raw.githubusercontent.com/linuxundich/ScreenForge/main/docs/screenshots/main-window.png</image>
+      <image>https://raw.githubusercontent.com/freiversum/ScreenForge/main/docs/screenshots/main-window.png</image>
     </screenshot>
     <screenshot>
       <caption>The background studio with large previews</caption>
-      <image>https://raw.githubusercontent.com/linuxundich/ScreenForge/main/docs/screenshots/background-studio.png</image>
+      <image>https://raw.githubusercontent.com/freiversum/ScreenForge/main/docs/screenshots/background-studio.png</image>
     </screenshot>
     <screenshot>
       <caption>Format presets, watermark and export</caption>
-      <image>https://raw.githubusercontent.com/linuxundich/ScreenForge/main/docs/screenshots/export.png</image>
+      <image>https://raw.githubusercontent.com/freiversum/ScreenForge/main/docs/screenshots/export.png</image>
     </screenshot>
   </screenshots>
   <releases>

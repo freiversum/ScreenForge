@@ -15,7 +15,7 @@ xgettext --from-code=UTF-8 --add-comments=Translators --keyword=_ --keyword=C_:1
   -o "$tmp/other.pot" "${other[@]}"
 msgcat --use-first "$tmp/other.pot" "$tmp/rust.pot" -o "$tmp/all.pot"
 xgettext --from-code=UTF-8 --no-wrap --package-name=screenforge \
-  --msgid-bugs-address=https://github.com/linuxundich/ScreenForge/issues \
+  --msgid-bugs-address=https://github.com/freiversum/ScreenForge/issues \
   -o po/screenforge.pot "$tmp/all.pot"
 shopt -s nullglob
 for po in po/*.po; do

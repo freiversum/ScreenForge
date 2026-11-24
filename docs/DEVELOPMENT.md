@@ -49,7 +49,7 @@ GNOME 51 runtime. Inside the sandbox, Android import calls the host's
   renderer shared by preview and export, undo stack, `.screenforge`
   project files. No GTK dependency, unit-tested.
 - The generated backgrounds come from
-  [Prospekt](https://github.com/linuxundich/prospekt), a separate library
+  [Prospekt](https://github.com/freiversum/prospekt), a separate library
   (git dependency, pinned to a tag) that the wallpaper app Kulisse uses
   too. `core/src/generator.rs` only wraps it: ScreenForge renders at least
   algorithm version 2, so the classic waves are always smooth. `core/src/palette.rs` keeps the two

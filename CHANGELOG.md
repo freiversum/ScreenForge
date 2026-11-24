@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The repository moved to the freiversum organization: https://github.com/freiversum/ScreenForge. Old `github.com/linuxundich/ScreenForge` links and clone URLs redirect.
+
 ### Added
 
 - About dialog: link "A star in the freiversum" to

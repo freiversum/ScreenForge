@@ -6,4 +6,4 @@ members = ["core", "app"]
 version = "0.38.0"
 edition = "2021"
 license = "GPL-3.0-or-later"
-repository = "https://github.com/linuxundich/ScreenForge"
+repository = "https://github.com/freiversum/ScreenForge"
